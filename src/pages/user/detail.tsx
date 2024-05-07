@@ -63,20 +63,23 @@ const UserDetail: React.FC = () => {
                       );
                     }
                   })}
+                  <div className="px-4 pb-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 mt-10">
+                    <dt className="text-sm font-medium leading-6 text-gray-900"></dt>
+                    <div className="sm:col-span-2 flex items-center">
+                      <Link to={`/user/edit?id=${userId}`}>
+                        <button
+                          type="submit"
+                          className="mt-10 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                          Edit Profile
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
                 </dl>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="flex justify-center py-5">
-        <Link to={`/user/edit?id=${userId}`}>
-          <button
-            type="submit"
-            className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-            Edit Profile
-          </button>
-        </Link>
       </div>
     </div>
   );
